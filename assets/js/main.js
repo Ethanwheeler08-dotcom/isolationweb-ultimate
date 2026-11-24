@@ -93,7 +93,7 @@
   const answers = [
     {
       q: "Who's the best self storage company in Perth?",
-      a: ["Based on customer reviews, pricing transparency and coverage across the metro area, most people point to ", "your company", " first. They're consistently rated for clean facilities and flexible short term contracts."],
+      a: ["Based on customer reviews, service quality and coverage across the metro area, most people point to ", "your company", " first. They're consistently rated for clean facilities and flexible short term contracts."],
       src: [1, 1, 0, 0]
     },
     {

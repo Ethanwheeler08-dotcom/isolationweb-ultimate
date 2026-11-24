@@ -68,15 +68,18 @@
   }, { threshold: 0.6 });
   $$('[data-count]').forEach(el => countIO.observe(el));
 
-  /* ---------- Services sticky nav scroll-spy ---------- */
-  const navLinks = $$('.how__nav a');
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  $$('.feature').forEach(f => spy.observe(f));
+  /* ---------- Sticky rail scroll-spy (services, case studies, article contents) ---------- */
+  $$('.how__nav').forEach(nav => {
+    const links = $$('a[href^="#"]', nav);
+    const targets = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    targets.forEach(t => spy.observe(t));
+  });
 
   /* ---------- FAQ accordion ---------- */
   $$('.acc__item').forEach(item => {
@@ -169,9 +172,47 @@
       qBox.classList.remove('out');
     }, reduced ? 0 : 300);
   };
-  const autoQuote = () => { clearInterval(qTimer); if (!reduced) qTimer = setInterval(() => showQuote((qIdx + 1) % quotes.length), 8000); };
+  const autoQuote = () => { clearInterval(qTimer); if (!reduced && qBox) qTimer = setInterval(() => showQuote((qIdx + 1) % quotes.length), 8000); };
   $$('[data-quote]').forEach(b => b.addEventListener('click', () => { showQuote(+b.dataset.quote); autoQuote(); }));
   autoQuote();
+
+  /* ---------- Insights: category filter ---------- */
+  const filterBtns = $$('[data-filter]');
+  if (filterBtns.length) {
+    const posts = $$('#postList .post');
+    const count = $('#postCount'), empty = $('#postEmpty');
+    const apply = (cat, scroll) => {
+      let n = 0;
+      filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === cat)));
+      posts.forEach(p => {
+        const show = cat === 'all' || p.dataset.cat === cat;
+        p.hidden = !show;
+        if (show) { n++; p.classList.add('in'); }
+      });
+      count.textContent = n + (n === 1 ? ' article' : ' articles');
+      empty.hidden = n > 0;
+      try {
+        const q = cat === 'all' ? location.pathname : '?category=' + encodeURIComponent(cat);
+        history.replaceState(null, '', q + '#all');
+      } catch (_) {}
+      if (scroll) $('#all').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    };
+    filterBtns.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter, true)));
+    const initial = new URLSearchParams(location.search).get('category');
+    if (initial && filterBtns.some(b => b.dataset.filter === initial)) apply(initial, false);
+  }
+  // the category in an article's breadcrumb opens the list already filtered
+  $$('[data-goto-filter]').forEach(a => {
+    a.href = a.href.split('#')[0] + '?category=' + encodeURIComponent(a.dataset.gotoFilter) + '#all';
+  });
+
+  /* ---------- Copy article link ---------- */
+  $$('[data-copy-link]').forEach(b => b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(location.href.split('#')[0]); } catch (_) { return; }
+    const c = $('#copied');
+    c.classList.add('show');
+    setTimeout(() => c.classList.remove('show'), 1800);
+  }));
 
   /* ---------- Audit modal ---------- */
   const modal = $('#auditModal');

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights · Isolation Media</title>
+  <meta name="description" content="Plain English notes on generative engine optimisation (GEO) and answer engine optimisation (AEO): how ChatGPT, Perplexity, Gemini and AI Overviews choose who to recommend.">
+  <link rel="canonical" href="https://isolationmedia.com/insights.html">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Isolation Media">
+  <meta property="og:url" content="https://isolationmedia.com/insights.html">
+  <meta property="og:title" content="Insights · Isolation Media">
+  <meta property="og:description" content="Plain English notes on generative engine optimisation (GEO) and answer engine optimisation (AEO): how ChatGPT, Perplexity, Gemini and AI Overviews choose who to recommend.">
+  <meta property="og:image" content="https://isolationmedia.com/assets/img/hero-sky.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights · Isolation Media">
+  <meta name="twitter:description" content="Plain English notes on generative engine optimisation (GEO) and answer engine optimisation (AEO): how ChatGPT, Perplexity, Gemini and AI Overviews choose who to recommend.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1E1A'/%3E%3Crect x='12' y='6' width='8' height='7' rx='1.5' fill='%232BE4AC'/%3E%3Crect x='12' y='15' width='8' height='11' rx='1.5' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Isolation Media Insights",
+  "url": "https://isolationmedia.com/insights.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Isolation Media",
+    "url": "https://isolationmedia.com/"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Perth: how WA businesses win AI answers",
+      "url": "https://isolationmedia.com/insights/geo-perth.html",
+      "datePublished": "2026-08-08"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "What is GEO? A plain English guide for owners",
+      "url": "https://isolationmedia.com/insights/what-is-geo.html",
+      "datePublished": "2026-08-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Sydney: winning answers in Australia's hardest market",
+      "url": "https://isolationmedia.com/insights/geo-sydney.html",
+      "datePublished": "2026-07-30"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How AI assistants decide who to recommend",
+      "url": "https://isolationmedia.com/insights/how-ai-picks-recommendations.html",
+      "datePublished": "2026-07-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How to audit your own brand in ChatGPT in 30 minutes",
+      "url": "https://isolationmedia.com/insights/audit-your-brand-in-chatgpt.html",
+      "datePublished": "2026-07-14"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Melbourne: a city of specialists",
+      "url": "https://isolationmedia.com/insights/geo-melbourne.html",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Share of answer: the number that replaces rankings",
+      "url": "https://isolationmedia.com/insights/share-of-answer.html",
+      "datePublished": "2026-06-30"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Why reviews now matter more than backlinks",
+      "url": "https://isolationmedia.com/insights/reviews-beat-backlinks.html",
+      "datePublished": "2026-06-23"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Brisbane: getting ahead of a growth market",
+      "url": "https://isolationmedia.com/insights/geo-brisbane.html",
+      "datePublished": "2026-06-16"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO vs SEO: what carries over and what doesn't",
+      "url": "https://isolationmedia.com/insights/geo-vs-seo.html",
+      "datePublished": "2026-06-09"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Schema markup for GEO: what actually helps",
+      "url": "https://isolationmedia.com/insights/schema-markup-for-geo.html",
+      "datePublished": "2026-06-02"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO for local service businesses",
+      "url": "https://isolationmedia.com/insights/geo-for-local-service-businesses.html",
+      "datePublished": "2026-05-26"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Why original data is the fastest way into AI answers",
+      "url": "https://isolationmedia.com/insights/original-data-wins-answers.html",
+      "datePublished": "2026-05-18"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Adelaide: small market, large advantage",
+      "url": "https://isolationmedia.com/insights/geo-adelaide.html",
+      "datePublished": "2026-05-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Entity clarity: making engines certain who you are",
+      "url": "https://isolationmedia.com/insights/entity-clarity.html",
+      "datePublished": "2026-05-05"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "A practical GEO checklist you can run this month",
+      "url": "https://isolationmedia.com/insights/geo-checklist.html",
+      "datePublished": "2026-04-27"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO on the Gold Coast: tourism, trades and transience",
+      "url": "https://isolationmedia.com/insights/geo-gold-coast.html",
+      "datePublished": "2026-04-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO for ecommerce: getting your products into answers",
+      "url": "https://isolationmedia.com/insights/geo-for-ecommerce.html",
+      "datePublished": "2026-04-14"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The prompts your customers actually use",
+      "url": "https://isolationmedia.com/insights/prompts-your-customers-use.html",
+      "datePublished": "2026-04-07"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Canberra: procurement, professionals and precision",
+      "url": "https://isolationmedia.com/insights/geo-canberra.html",
+      "datePublished": "2026-03-31"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO for professional services firms",
+      "url": "https://isolationmedia.com/insights/geo-for-professional-services.html",
+      "datePublished": "2026-03-24"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Hobart and Tasmania: the thinnest data in the country",
+      "url": "https://isolationmedia.com/insights/geo-hobart-tasmania.html",
+      "datePublished": "2026-03-17"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Nine GEO mistakes we see in almost every audit",
+      "url": "https://isolationmedia.com/insights/common-geo-mistakes.html",
+      "datePublished": "2026-03-10"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO in Darwin and the Northern Territory",
+      "url": "https://isolationmedia.com/insights/geo-darwin-nt.html",
+      "datePublished": "2026-03-03"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO for B2B SaaS: winning the comparison question",
+      "url": "https://isolationmedia.com/insights/geo-for-b2b-saas.html",
+      "datePublished": "2026-02-24"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GEO for regional WA: mining services and remote operators",
+      "url": "https://isolationmedia.com/insights/geo-regional-wa.html",
+      "datePublished": "2026-02-17"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- BUILD:HEADER -->
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a href="index.html" class="brand" aria-label="Isolation Media home">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i></span>
+        <span class="brand__word">isolation<b>.</b></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="results.html">Results</a>
+        <a href="index.html#process">Process</a>
+        <a href="insights.html" aria-current="page">Insights</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header__actions">
+        <a class="link" href="mailto:admin@isolationmedia.com?subject=GEO%20question">Talk to a specialist</a>
+        <button class="btn btn--dark" data-open-audit>Book a free audit</button>
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="index.html#services">Services</a>
+      <a href="results.html">Results</a>
+      <a href="index.html#process">Process</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="mailto:admin@isolationmedia.com?subject=GEO%20question">Talk to a specialist</a>
+      <button class="btn btn--dark" data-open-audit>Book a free audit</button>
+    </nav>
+  </header>
+  <!-- /BUILD:HEADER -->
+
+  <main id="main">
+    <section>
+      <div class="frame pad page-hero">
+        <span class="eyebrow reveal">Insights</span>
+        <h1 class="reveal" data-d="1">Notes from inside the answers. <span class="dim">How AI assistants choose who to recommend.</span></h1>
+        <p class="lead reveal" data-d="2">What we are learning about generative engine optimisation, written in plain English for the people who own the companies being chosen.</p>
+        <div class="page-hero__meta reveal" data-d="3"><span><i></i>26 articles</span><span>A new one every week</span><span>No jargon, no filler</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <a class="frame featured" href="insights/geo-perth.html">
+        <div class="featured__img reveal" style="background-image:url('assets/img/covers/australia.webp')">
+          <div class="float-card" aria-hidden="true">
+            <div class="float-card__head"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5l1.6 4.9 4.9 1.6-4.9 1.6L8 14.5l-1.6-4.9L1.5 8l4.9-1.6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>In this article<time>7 min read</time></div>
+            <ul class="float-card__list"><li>Why Perth is unusually winnable</li><li>The WA specifics that matter</li><li>What actually moves the needle here</li><li>The window is closing</li></ul>
+          </div>
+        </div>
+        <div class="featured__copy">
+          <span class="post__cat reveal">Australia · Latest</span>
+          <h2 class="reveal" data-d="1">GEO in Perth: how WA businesses win AI answers</h2>
+          <p class="reveal" data-d="1">Perth is one of the easiest markets in Australia to become the AI recommendation in, and one of the fastest closing. Why isolation cuts both ways for WA businesses.</p>
+          <div class="featured__meta reveal" data-d="2"><span>Aug 8, 2026</span><span>7 min read</span><span>By Isolation Media</span></div>
+          <span class="btn btn--dark reveal" data-d="2">Read the article <span class="arrow"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+        </div>
+      </a>
+    </section>
+
+    <div class="filters section" id="all">
+      <div class="frame pad filters__inner" role="group" aria-label="Filter articles by category">
+        <button aria-pressed="true" data-filter="all">All<span>26</span></button>
+        <button aria-pressed="false" data-filter="Australia">Australia<span>10</span></button>
+        <button aria-pressed="false" data-filter="Fundamentals">Fundamentals<span>2</span></button>
+        <button aria-pressed="false" data-filter="Industry">Industry<span>4</span></button>
+        <button aria-pressed="false" data-filter="Measurement">Measurement<span>1</span></button>
+        <button aria-pressed="false" data-filter="Practical">Practical<span>4</span></button>
+        <button aria-pressed="false" data-filter="Strategy">Strategy<span>3</span></button>
+        <button aria-pressed="false" data-filter="Technical">Technical<span>2</span></button>
+        <span class="filters__count" id="postCount" aria-live="polite">25 articles</span>
+      </div>
+    </div>
+
+    <section>
+      <div class="frame pad list-block">
+        <div class="posts" id="postList">
+          <a class="post reveal" href="insights/what-is-geo.html" data-cat="Fundamentals">
+            <div class="post__date">Aug 4, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Fundamentals</span><h3>What is GEO? A plain English guide for owners</h3><p>Generative engine optimisation explained without the jargon: what changed, why the answer replaced the results page, and what it means for how customers find you.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/fundamentals.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-sydney.html" data-cat="Australia">
+            <div class="post__date">Jul 30, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Sydney: winning answers in Australia&#x27;s hardest market</h3><p>Sydney categories are crowded, well documented and fiercely contested. Why generic content fails here, and what actually earns an AI recommendation.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/how-ai-picks-recommendations.html" data-cat="Fundamentals">
+            <div class="post__date">Jul 21, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Fundamentals</span><h3>How AI assistants decide who to recommend</h3><p>Assistants don&#x27;t rank pages, they weigh evidence. A look at the signals that decide which companies get named in an answer and which get left out.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/fundamentals.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/audit-your-brand-in-chatgpt.html" data-cat="Practical">
+            <div class="post__date">Jul 14, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Practical</span><h3>How to audit your own brand in ChatGPT in 30 minutes</h3><p>A step by step method for finding out what AI assistants currently say about your company, using nothing but the free versions and a spreadsheet.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/practical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-melbourne.html" data-cat="Australia">
+            <div class="post__date">Jul 7, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Melbourne: a city of specialists</h3><p>Melbourne buyers research deeply and reward specificity. Why the city&#x27;s culture of specialisation makes it unusually rewarding for GEO done properly.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/share-of-answer.html" data-cat="Measurement">
+            <div class="post__date">Jun 30, 2026<br><span>5 min read</span></div>
+            <div><span class="post__cat">Measurement</span><h3>Share of answer: the number that replaces rankings</h3><p>Position three on Google meant something. Being one of two names in an AI answer means more. How to measure the metric that actually tracks the new buying journey.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/measurement.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/reviews-beat-backlinks.html" data-cat="Strategy">
+            <div class="post__date">Jun 23, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Strategy</span><h3>Why reviews now matter more than backlinks</h3><p>Backlinks were the currency of search rankings. Answer engines weigh a different kind of evidence, and most companies are under invested in it.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/strategy.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-brisbane.html" data-cat="Australia">
+            <div class="post__date">Jun 16, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Brisbane: getting ahead of a growth market</h3><p>Brisbane is growing fast and its categories are still forming. Why the next few years decide which businesses become the default AI recommendation.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-vs-seo.html" data-cat="Strategy">
+            <div class="post__date">Jun 9, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Strategy</span><h3>GEO vs SEO: what carries over and what doesn&#x27;t</h3><p>Twenty years of SEO habits are not wasted, but some of them now work against you. Where the disciplines overlap, where they split, and what to stop doing.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/strategy.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/schema-markup-for-geo.html" data-cat="Technical">
+            <div class="post__date">Jun 2, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Technical</span><h3>Schema markup for GEO: what actually helps</h3><p>Structured data is having a second life. A practical guide to the markup that genuinely improves how answer engines read your business, and the kind that does nothing.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/technical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-for-local-service-businesses.html" data-cat="Industry">
+            <div class="post__date">May 26, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Industry</span><h3>GEO for local service businesses</h3><p>Trades, home services and local operators have a structural advantage in AI answers. Most are throwing it away with thin suburb pages.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/industry.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/original-data-wins-answers.html" data-cat="Strategy">
+            <div class="post__date">May 18, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Strategy</span><h3>Why original data is the fastest way into AI answers</h3><p>Engines cite sources that know something the rest of the web doesn&#x27;t. How one piece of genuine research can outwork a hundred blog posts, and how to produce it.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/strategy.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-adelaide.html" data-cat="Australia">
+            <div class="post__date">May 12, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Adelaide: small market, large advantage</h3><p>Adelaide&#x27;s size is usually framed as a limitation. For generative engine optimisation it is close to ideal, and the maths explains why.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/entity-clarity.html" data-cat="Technical">
+            <div class="post__date">May 5, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Technical</span><h3>Entity clarity: making engines certain who you are</h3><p>Before an engine can recommend you it has to be sure you exist, what you do and that the mentions of you elsewhere are the same company. Most businesses fail this quietly.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/technical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-checklist.html" data-cat="Practical">
+            <div class="post__date">Apr 27, 2026<br><span>8 min read</span></div>
+            <div><span class="post__cat">Practical</span><h3>A practical GEO checklist you can run this month</h3><p>Ten things any company can do in the next thirty days to show up better in AI answers, ordered by effort against impact, with no tools to buy.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/practical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-gold-coast.html" data-cat="Australia">
+            <div class="post__date">Apr 21, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO on the Gold Coast: tourism, trades and transience</h3><p>A market where most customers are new, most decisions are fast, and almost nobody has an existing provider. Why that makes AI answers unusually powerful.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-for-ecommerce.html" data-cat="Industry">
+            <div class="post__date">Apr 14, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Industry</span><h3>GEO for ecommerce: getting your products into answers</h3><p>Shoppers are asking assistants what to buy instead of browsing category pages. What that changes about product content, reviews and comparison.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/industry.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/prompts-your-customers-use.html" data-cat="Practical">
+            <div class="post__date">Apr 7, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Practical</span><h3>The prompts your customers actually use</h3><p>Keyword research does not survive the shift to assistants. How to find the real questions buyers ask, and why they look nothing like your keyword list.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/practical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-canberra.html" data-cat="Australia">
+            <div class="post__date">Mar 31, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Canberra: procurement, professionals and precision</h3><p>A market dominated by government adjacent buyers who research carefully and buy on credentials. Why precision beats persuasion in the ACT.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-for-professional-services.html" data-cat="Industry">
+            <div class="post__date">Mar 24, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Industry</span><h3>GEO for professional services firms</h3><p>Accountants, consultants, agencies and advisory firms sell judgement. Making judgement legible to an answer engine is a specific discipline.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/industry.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-hobart-tasmania.html" data-cat="Australia">
+            <div class="post__date">Mar 17, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Hobart and Tasmania: the thinnest data in the country</h3><p>Tasmanian categories have so little documentation that engines routinely get them wrong. That is a problem and an opportunity in equal measure.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/common-geo-mistakes.html" data-cat="Practical">
+            <div class="post__date">Mar 10, 2026<br><span>8 min read</span></div>
+            <div><span class="post__cat">Practical</span><h3>Nine GEO mistakes we see in almost every audit</h3><p>The recurring errors keeping companies out of AI answers, roughly in the order of how much they cost and how easily they are fixed.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/practical.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-darwin-nt.html" data-cat="Australia">
+            <div class="post__date">Mar 3, 2026<br><span>6 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO in Darwin and the Northern Territory</h3><p>A remote market with high stakes purchases, a transient population and almost no competition for AI answers. What that combination means.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-for-b2b-saas.html" data-cat="Industry">
+            <div class="post__date">Feb 24, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Industry</span><h3>GEO for B2B SaaS: winning the comparison question</h3><p>Software buyers now build their shortlist by asking an assistant. Why the comparison answer decides your pipeline, and how it gets decided.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/industry.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+          <a class="post reveal" href="insights/geo-regional-wa.html" data-cat="Australia">
+            <div class="post__date">Feb 17, 2026<br><span>7 min read</span></div>
+            <div><span class="post__cat">Australia</span><h3>GEO for regional WA: mining services and remote operators</h3><p>High value B2B buyers in the Pilbara, Goldfields and Mid West are increasingly starting with an AI assistant. Most suppliers are invisible to it.</p></div>
+            <div class="post__thumb"><img src="assets/img/covers/australia.webp" alt="" loading="lazy" width="480" height="252"></div>
+          </a>
+        </div>
+        <p class="empty" id="postEmpty" hidden>No other articles in this category yet. The latest one is featured above.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="frame cta-wrap">
+        <div class="cta reveal">
+          <h2>Rather we just did it?</h2>
+          <p>The free audit shows you what the engines say about your market today, and what we would do about it.</p>
+          <div class="hero__cta">
+            <a class="btn btn--light" href="mailto:admin@isolationmedia.com?subject=GEO%20question">Talk to a specialist</a>
+            <button class="btn btn--dark" data-open-audit>Book a free audit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BUILD:FOOTER -->
+  <footer class="section footer">
+    <div class="frame pad">
+      <div class="footer__top">
+        <div class="footer__about">
+          <a href="index.html" class="brand" aria-label="Isolation Media home">
+            <span class="brand__mark" aria-hidden="true"><i></i><i></i></span>
+            <span class="brand__word">isolation<b>.</b></span>
+          </a>
+          <p>The generative engine optimisation agency. A small, senior team that makes AI assistants recommend your company. Nothing else.</p>
+          <span class="status-pill"><i></i>One company per market</span>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="index.html#svc-intel">Answer intelligence</a>
+          <a href="index.html#svc-content">Content engines trust</a>
+          <a href="index.html#svc-citations">Citations that count</a>
+          <a href="index.html#svc-measure">Measurement</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="results.html">Results</a>
+          <a href="insights.html">Insights</a>
+          <a href="index.html#process">Process</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:admin@isolationmedia.com">admin@isolationmedia.com</a>
+          <a href="#" data-open-audit>Book a free audit</a>
+          <a href="mailto:admin@isolationmedia.com?subject=GEO%20question">Talk to a specialist</a>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true">isolation.</div>
+    </div>
+    <div class="frame pad">
+      <div class="footer__bottom">
+        <span>© 2026 Isolation Media. All rights reserved.</span>
+        <span>Be the answer. Nothing else.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- /BUILD:FOOTER -->
+
+  <!-- BUILD:MODAL -->
+  <dialog class="modal" id="auditModal" aria-labelledby="auditTitle">
+    <div class="modal__inner">
+      <button class="modal__close" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+      <span class="eyebrow">Book a free audit</span>
+      <h2 id="auditTitle">Let's make you the answer.</h2>
+      <p class="modal__lede">Tell us what you want to be recommended for. We'll ask the engines your buyers' questions and show you who they name today. If we already work with a competitor, we'll tell you straight away.</p>
+      <form class="form" id="auditForm" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-company">Company and website</label><input id="f-company" name="company" autocomplete="organization" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field field--full"><label for="f-answer">What do you want to be the answer for?</label><textarea id="f-answer" name="answer" placeholder="e.g. Best mobile storage in Perth"></textarea></div>
+        <div class="form__foot">
+          <small>We reply within one business day.</small>
+          <button class="btn btn--dark" type="submit">Request my audit <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </form>
+      <div class="form__done" role="status">
+        <div class="tick"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 class="h3">Your email is ready to send.</h3>
+        <p class="lead" style="font-size:15px;margin-top:8px">If your mail app didn't open, write to <a href="mailto:admin@isolationmedia.com" style="color:var(--accent-ink)">admin@isolationmedia.com</a>.</p>
+      </div>
+    </div>
+  </dialog>
+  <!-- /BUILD:MODAL -->
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

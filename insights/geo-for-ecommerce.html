@@ -278,7 +278,7 @@
         <div class="footer__col">
           <h4>Contact</h4>
           <a href="mailto:admin@isolationmedia.com">admin@isolationmedia.com</a>
-          <a href="#" data-open-audit>Book a free audit</a>
+          <a href="#auditModal" data-open-audit>Book a free audit</a>
           <a href="mailto:admin@isolationmedia.com?subject=GEO%20question">Talk to a specialist</a>
         </div>
       </div>
@@ -300,21 +300,24 @@
       <span class="eyebrow">Book a free audit</span>
       <h2 id="auditTitle">Let's make you the answer.</h2>
       <p class="modal__lede">Tell us what you want to be recommended for. We'll ask the engines your buyers' questions and show you who they name today. If we already work with a competitor, we'll tell you straight away.</p>
-      <form class="form" id="auditForm" novalidate>
+      <form class="form" id="auditForm" action="https://formspree.io/f/mqpqwowr" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New audit request - Isolation Media">
+        <div class="hp-field" aria-hidden="true"><label for="f-gotcha">Leave this field empty</label><input id="f-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
         <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label for="f-company">Company and website</label><input id="f-company" name="company" autocomplete="organization" required></div>
         <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div class="field field--full"><label for="f-answer">What do you want to be the answer for?</label><textarea id="f-answer" name="answer" placeholder="e.g. Best mobile storage in Perth"></textarea></div>
+        <div class="field field--full"><label for="f-message">What do you want to be the answer for?</label><textarea id="f-message" name="message" placeholder="e.g. Best mobile storage in Perth"></textarea></div>
+        <p class="form__error" id="formError" role="alert" hidden>Sorry, your request didn't send. Please email us at <a href="mailto:admin@isolationmedia.com">admin@isolationmedia.com</a> instead.</p>
         <div class="form__foot">
           <small>We reply within one business day.</small>
-          <button class="btn btn--dark" type="submit">Request my audit <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="btn btn--dark" type="submit"><span class="btn__label">Request my audit</span> <svg class="arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </form>
       <div class="form__done" role="status">
         <div class="tick"><svg width="22" height="22" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3 class="h3">Your email is ready to send.</h3>
-        <p class="lead" style="font-size:15px;margin-top:8px">If your mail app didn't open, write to <a href="mailto:admin@isolationmedia.com" style="color:var(--accent-ink)">admin@isolationmedia.com</a>.</p>
+        <h3 class="h3">Thanks, we've got your request.</h3>
+        <p class="lead" style="font-size:15px;margin-top:8px">We'll reply within one business day. Anything to add? Email <a href="mailto:admin@isolationmedia.com" style="color:var(--accent-ink)">admin@isolationmedia.com</a>.</p>
       </div>
     </div>
   </dialog>

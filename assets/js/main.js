@@ -217,17 +217,21 @@
   /* ---------- Audit modal ---------- */
   const modal = $('#auditModal');
   const form = $('#auditForm');
-  $$('[data-open-audit]').forEach(b => b.addEventListener('click', e => {
-    e.preventDefault();
+  const openAudit = () => {
+    if (!modal) return;
     modal.classList.remove('is-sent');
-    if (typeof modal.showModal === 'function') modal.showModal();
-    else window.location.href = 'mailto:admin@isolationmedia.com?subject=Free%20GEO%20audit';
+    if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); }
+    else { modal.setAttribute('open', ''); }
     setTimeout(() => $('#f-name')?.focus(), 50);
-  }));
+  };
+  $$('[data-open-audit]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openAudit(); }));
+  // a link or shared URL ending in #auditModal opens the form
+  if (location.hash === '#auditModal') openAudit();
+  window.addEventListener('hashchange', () => { if (location.hash === '#auditModal') openAudit(); });
   $('[data-close]', modal)?.addEventListener('click', () => modal.close());
   modal?.addEventListener('click', e => { if (e.target === modal) modal.close(); });
 
-  form?.addEventListener('submit', e => {
+  form?.addEventListener('submit', async e => {
     e.preventDefault();
     let ok = true;
     $$('[required]', form).forEach(f => {
@@ -236,14 +240,30 @@
       if (bad && ok) { f.focus(); ok = false; }
     });
     if (!ok) return;
-    const d = Object.fromEntries(new FormData(form));
-    const body = [
-      `Name: ${d.name}`, `Email: ${d.email}`, `Company and website: ${d.company}`,
-      `Phone: ${d.phone || '-'}`, '', 'What we want to be the answer for:', d.answer || '-'
-    ].join('\n');
-    window.location.href = 'mailto:admin@isolationmedia.com'
-      + '?subject=' + encodeURIComponent('Free GEO audit request: ' + d.company)
-      + '&body=' + encodeURIComponent(body);
-    modal.classList.add('is-sent');
+
+    const btn = $('button[type="submit"]', form);
+    const label = $('.btn__label', btn);
+    const err = $('#formError');
+    if (btn.disabled) return; // already sending
+    btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
+    label.textContent = 'Sending…';
+    err.hidden = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!res.ok) throw new Error('Formspree responded ' + res.status);
+      form.reset();
+      modal.classList.add('is-sent');
+    } catch (_) {
+      err.hidden = false;
+    } finally {
+      btn.disabled = false;
+      btn.removeAttribute('aria-busy');
+      label.textContent = 'Request my audit';
+    }
   });
 })();

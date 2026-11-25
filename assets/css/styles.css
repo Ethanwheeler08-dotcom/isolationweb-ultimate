@@ -919,3 +919,13 @@ a.case { color: inherit; }
 .float-card__list { margin: 10px 0 2px; display: grid; gap: 7px; }
 .float-card__list li { display: grid; grid-template-columns: 14px 1fr; gap: 6px; color: #5d656c; line-height: 1.4; }
 .float-card__list li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); margin-top: 6px; }
+
+/* Audit form: spam honeypot (off-screen, not display:none), error and sending states */
+.hp-field { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.form__error {
+  grid-column: 1 / -1; margin: 0; padding: 12px 14px; border-radius: 10px;
+  background: #fdeeee; color: #8a1f22; font-size: 14px; line-height: 1.5;
+}
+.form__error a { color: inherit; font-weight: 600; text-decoration: underline; }
+.form__error[hidden] { display: none; }
+.btn:disabled { opacity: .65; cursor: progress; }

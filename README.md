@@ -33,6 +33,9 @@ Then open http://localhost:8080.
 
 ## Audit form
 
-"Book a free audit" opens a form that writes an email to admin@isolationmedia.com in the visitor's mail app.
-To collect submissions without relying on the visitor's mail app, point the form at a form service
-(Formspree, Netlify Forms, etc.) in `assets/js/main.js`.
+"Book a free audit" opens a pop-up form (on every page) that posts to Formspree
+(https://formspree.io/f/mqpqwowr) in the background, so visitors stay on the page.
+Submissions arrive at the email address set in your Formspree dashboard. The form includes
+a hidden `_gotcha` spam trap and a `_subject` of "New audit request - Isolation Media".
+The form markup is in `MODAL` in `tools/build.py`; the submit code is in `assets/js/main.js`.
+Linking to any page with `#auditModal` on the end opens the form.
